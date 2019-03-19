@@ -8,33 +8,48 @@
     $sourceLang = $_POST['sourceLang'];
     $targetLang = $_POST['targetLang'];
     
-    var_dump($sourceText);
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";
 
+
+/*     $sourceText=explode('\n',$sourceText);
+     */
+    $sourceText=str_replace('\n'," ",$sourceText);
+     /* foreach($sourceText as $lyrics){
+            print_r($lyrics);
+            echo "<br>";
+        } */
+        var_dump($sourceText);
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
+        echo "<br>";
     $res = file_get_contents("https://translate.googleapis.com/translate_a/single?client=gtx&sl="
         .$sourceLang."&tl=".$targetLang."&dt=t&q=".urlencode($sourceText));
 
-/*      var_dump($res);
- */     echo "<br>";
+    var_dump($res);
+    echo "<br>";
     echo "<br>";
     echo "<br>";
     echo "<br>";
 /*     $res = preg_split("[\][n]"."[\] [n]",$res);
- */    
-$sourceText=explode('\n',$sourceText);
- foreach($sourceText as $lyrics){
+*/    
+    echo "<br>";
+    echo "<br>";
+    echo "<br>";
+/*     $res=explode('\\',$res); */
+$res=str_replace('\\','<br>',$res);
+$res=str_replace(',[','<br>',$res);
+$res=str_replace(',null,null,3]','<br>',$res);
+$res=str_replace('","]','<br>',$res);
+$res=str_replace('","','<br>',$res);
+$res=str_replace('"','<br>',$res);
+var_dump($res);
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+/* $res=explode('\n',$res);
+    foreach($res as $lyrics){
         print_r($lyrics);
         echo "<br>";
-    }
-    echo "<br>";
-    echo "<br>";
-    echo "<br>";
-    $res=explode('\\',$res);
- foreach($res as $lyrics){
-        print_r($lyrics);
-        echo "<br>";
-    }
+    }  */
 ?> 
