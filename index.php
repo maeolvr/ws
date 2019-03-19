@@ -5,10 +5,10 @@
     
 
     $sourceText = file_get_contents("https://api.lyrics.ovh/v1/".$artist."/".$title);
-    var_dump($sourceText);
+    echo ($sourceText);
    
 
-   $sourceLang = $_POST['sourceLang'];
+    $sourceLang = $_POST['sourceLang'];
     $targetLang = $_POST['targetLang'];
     
     $res = file_get_contents("https://translate.googleapis.com/translate_a/single?client=gtx&sl="
