@@ -10,7 +10,8 @@
         <h1 id="txtbanner" style="color:#1F2833;height: 150px; padding-top: 4%;"> <i class="fas fa-music"></i>
            Bienvenue sur Lala Trad <i class="fas fa-music"></i>
         </h1>
-    </div>';
+    </div>
+    <a href="index.html"> <button class="btn btn-primary" style="background-color:#66FCF1;color:#1F2833;margin-right: 20%;width:5%;height:7%;font-size:130%"><i class="fas fa-chevron-circle-left"></i></button></a>    ';
     
 
     $artist = rawurlencode($_POST['artist']);
@@ -75,13 +76,14 @@
     }
     else{
         $urlYT='https://www.youtube.com/results?search_query='.$artist.'+'.$title;
-        echo '<a href='.$urlYT.'><img src="yt.png" style="width: 8%"></a></br>';
+        echo '<a href='.$urlYT.'><img src="yt.png" style="width: 8%; margin-right:25%"></a></br>';
         foreach($res as $lyrics){
             print_r($lyrics);
             echo "<br>";
         }
 
     }
+
 
     
 ?>
