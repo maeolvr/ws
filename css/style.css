@@ -1,0 +1,41 @@
+.navbar {
+    font-size: 20px;
+}
+
+.h2carousel {
+    margin-bottom: 120px;
+    font-size: 70px;
+    color: grey;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    vertical-align: 50px;
+}
+
+.navbar-brand {
+    margin-top: 15px;
+    font-size: 24px;
+}
+
+.form-control {
+    font-size: 20px;
+} 
+
+.btn-recherche-navbar {
+    font-size: 17px;
+} 
+
+
+.outline-success {
+    font-size: 200px;
+}
+
+body {
+    font-size: 130%;
+}
+
+.hauteur {
+    height: 10%;
+}
+
+.hauteurStage  {
+    height: 50%;
+}
