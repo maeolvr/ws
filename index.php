@@ -74,6 +74,8 @@
         echo "<img src='mongif.gif' style='display: block;margin-left: auto;margin-right: auto'>";
     }
     else{
+        $urlYT='https://www.youtube.com/results?search_query='.$artist.'+'.$title;
+        echo '<a href='.$urlYT.'><img src="yt.png" style="width: 8%"></a></br>';
         foreach($res as $lyrics){
             print_r($lyrics);
             echo "<br>";
